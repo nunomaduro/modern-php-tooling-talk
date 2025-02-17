@@ -1552,6 +1552,102 @@
             "install-path": "../jean85/pretty-package-versions"
         },
         {
+            "name": "larastan/larastan",
+            "version": "v3.0.4",
+            "version_normalized": "3.0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/larastan/larastan.git",
+                "reference": "b394eba5805727423071fac9b53ea50dd7e920f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/larastan/larastan/zipball/b394eba5805727423071fac9b53ea50dd7e920f4",
+                "reference": "b394eba5805727423071fac9b53ea50dd7e920f4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/console": "^11.15.0",
+                "illuminate/container": "^11.15.0",
+                "illuminate/contracts": "^11.15.0",
+                "illuminate/database": "^11.15.0",
+                "illuminate/http": "^11.15.0",
+                "illuminate/pipeline": "^11.15.0",
+                "illuminate/support": "^11.15.0",
+                "php": "^8.2",
+                "phpmyadmin/sql-parser": "^5.9.0",
+                "phpstan/phpstan": "^2.1.3"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^12.0",
+                "laravel/framework": "^11.15.0",
+                "mockery/mockery": "^1.6",
+                "nikic/php-parser": "^5.3",
+                "orchestra/canvas": "^v9.1.3",
+                "orchestra/testbench-core": "^9.5.2",
+                "phpstan/phpstan-deprecation-rules": "^2.0.0",
+                "phpunit/phpunit": "^10.5.16"
+            },
+            "suggest": {
+                "orchestra/testbench": "Using Larastan for analysing a package needs Testbench"
+            },
+            "time": "2025-02-06T21:03:36+00:00",
+            "type": "phpstan-extension",
+            "extra": {
+                "phpstan": {
+                    "includes": [
+                        "extension.neon"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Larastan\\Larastan\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Can Vural",
+                    "email": "can9119@gmail.com"
+                },
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                }
+            ],
+            "description": "Larastan - Discover bugs in your code without running it. A phpstan/phpstan wrapper for Laravel",
+            "keywords": [
+                "PHPStan",
+                "code analyse",
+                "code analysis",
+                "larastan",
+                "laravel",
+                "package",
+                "php",
+                "static analysis"
+            ],
+            "support": {
+                "issues": "https://github.com/larastan/larastan/issues",
+                "source": "https://github.com/larastan/larastan/tree/v3.0.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/canvural",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../larastan/larastan"
+        },
+        {
             "name": "laravel/framework",
             "version": "v11.42.1",
             "version_normalized": "11.42.1.0",
@@ -3523,6 +3619,83 @@
             "install-path": "../nunomaduro/termwind"
         },
         {
+            "name": "peckphp/peck",
+            "version": "v0.1.2",
+            "version_normalized": "0.1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/peckphp/peck.git",
+                "reference": "571398fa2596c52fe848d55e5f7c5912df33d425"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/peckphp/peck/zipball/571398fa2596c52fe848d55e5f7c5912df33d425",
+                "reference": "571398fa2596c52fe848d55e5f7c5912df33d425",
+                "shasum": ""
+            },
+            "require": {
+                "nunomaduro/termwind": "^1.17.0|^2.3.0",
+                "php": "^8.3.0",
+                "symfony/console": "^6.4.17|^7.2.1",
+                "symfony/finder": "^6.4.17|^7.2.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.20.0",
+                "pestphp/pest": "^2.36|^3.7.4",
+                "pestphp/pest-plugin-type-coverage": "^2.8.7|^3.2.3",
+                "phpstan/phpstan": "^1.12.16",
+                "rector/rector": "^1.2.10",
+                "symfony/var-dumper": "^7.2.0"
+            },
+            "time": "2025-01-27T19:31:29+00:00",
+            "bin": [
+                "bin/peck"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Peck\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                }
+            ],
+            "description": "Peck is a powerful CLI tool designed to identify pure wording or spelling (grammar) mistakes in your codebase.",
+            "keywords": [
+                "checker",
+                "codebase",
+                "php",
+                "spelling"
+            ],
+            "support": {
+                "issues": "https://github.com/peckphp/peck/issues",
+                "source": "https://github.com/peckphp/peck/tree/v0.1.2"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.com/paypalme/enunomaduro",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/nunomaduro",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/nunomaduro",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../peckphp/peck"
+        },
+        {
             "name": "pestphp/pest",
             "version": "v3.7.4",
             "version_normalized": "3.7.4.0",
@@ -4244,6 +4417,96 @@
             "install-path": "../phpdocumentor/type-resolver"
         },
         {
+            "name": "phpmyadmin/sql-parser",
+            "version": "5.10.3",
+            "version_normalized": "5.10.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpmyadmin/sql-parser.git",
+                "reference": "5346664973d10cf1abff20837fb1183f3c11a055"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpmyadmin/sql-parser/zipball/5346664973d10cf1abff20837fb1183f3c11a055",
+                "reference": "5346664973d10cf1abff20837fb1183f3c11a055",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "symfony/polyfill-mbstring": "^1.3",
+                "symfony/polyfill-php80": "^1.16"
+            },
+            "conflict": {
+                "phpmyadmin/motranslator": "<3.0"
+            },
+            "require-dev": {
+                "phpbench/phpbench": "^1.1",
+                "phpmyadmin/coding-standard": "^3.0",
+                "phpmyadmin/motranslator": "^4.0 || ^5.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "^1.9.12",
+                "phpstan/phpstan-phpunit": "^1.3.3",
+                "phpunit/phpunit": "^8.5 || ^9.6",
+                "psalm/plugin-phpunit": "^0.16.1",
+                "vimeo/psalm": "^4.11",
+                "zumba/json-serializer": "~3.0.2"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance",
+                "phpmyadmin/motranslator": "Translate messages to your favorite locale"
+            },
+            "time": "2025-01-19T04:14:02+00:00",
+            "bin": [
+                "bin/highlight-query",
+                "bin/lint-query",
+                "bin/sql-parser",
+                "bin/tokenize-query"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "PhpMyAdmin\\SqlParser\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "The phpMyAdmin Team",
+                    "email": "developers@phpmyadmin.net",
+                    "homepage": "https://www.phpmyadmin.net/team/"
+                }
+            ],
+            "description": "A validating SQL lexer and parser with a focus on MySQL dialect.",
+            "homepage": "https://github.com/phpmyadmin/sql-parser",
+            "keywords": [
+                "analysis",
+                "lexer",
+                "parser",
+                "query linter",
+                "sql",
+                "sql lexer",
+                "sql linter",
+                "sql parser",
+                "sql syntax highlighter",
+                "sql tokenizer"
+            ],
+            "support": {
+                "issues": "https://github.com/phpmyadmin/sql-parser/issues",
+                "source": "https://github.com/phpmyadmin/sql-parser"
+            },
+            "funding": [
+                {
+                    "url": "https://www.phpmyadmin.net/donate/",
+                    "type": "other"
+                }
+            ],
+            "install-path": "../phpmyadmin/sql-parser"
+        },
+        {
             "name": "phpoption/phpoption",
             "version": "1.9.3",
             "version_normalized": "1.9.3.0",
@@ -4370,6 +4633,67 @@
                 "source": "https://github.com/phpstan/phpdoc-parser/tree/2.0.2"
             },
             "install-path": "../phpstan/phpdoc-parser"
+        },
+        {
+            "name": "phpstan/phpstan",
+            "version": "2.1.5",
+            "version_normalized": "2.1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "451b17f9665481ee502adc39be987cb71067ece2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/451b17f9665481ee502adc39be987cb71067ece2",
+                "reference": "451b17f9665481ee502adc39be987cb71067ece2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "time": "2025-02-13T12:49:56+00:00",
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "keywords": [
+                "dev",
+                "static analysis"
+            ],
+            "support": {
+                "docs": "https://phpstan.org/user-guide/getting-started",
+                "forum": "https://github.com/phpstan/phpstan/discussions",
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "security": "https://github.com/phpstan/phpstan/security/policy",
+                "source": "https://github.com/phpstan/phpstan-src"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../phpstan/phpstan"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -9386,12 +9710,14 @@
         "filp/whoops",
         "hamcrest/hamcrest-php",
         "jean85/pretty-package-versions",
+        "larastan/larastan",
         "laravel/pail",
         "laravel/pint",
         "laravel/sail",
         "mockery/mockery",
         "myclabs/deep-copy",
         "nunomaduro/collision",
+        "peckphp/peck",
         "pestphp/pest",
         "pestphp/pest-plugin",
         "pestphp/pest-plugin-arch",
@@ -9402,7 +9728,9 @@
         "phpdocumentor/reflection-common",
         "phpdocumentor/reflection-docblock",
         "phpdocumentor/type-resolver",
+        "phpmyadmin/sql-parser",
         "phpstan/phpdoc-parser",
+        "phpstan/phpstan",
         "phpunit/php-code-coverage",
         "phpunit/php-file-iterator",
         "phpunit/php-invoker",

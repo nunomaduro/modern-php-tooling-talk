@@ -15,11 +15,13 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
+        "larastan/larastan": "^3.0",
         "laravel/pail": "^1.1",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.1",
+        "peckphp/peck": "^0.1.2",
         "pestphp/pest": "^3.7",
         "pestphp/pest-plugin-laravel": "^3.1"
     },
@@ -54,6 +56,22 @@
         "dev": [
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
+        ],
+        "lint": "pint",
+        "refactor": "rector",
+        "test:type-coverage": "pest --type-coverage --min=100",
+        "test:typos": "peck",
+        "test:lint": "pint --test",
+        "test:unit": "pest --parallel --coverage --exactly=100",
+        "test:types": "phpstan",
+        "test:refactor": "rector --dry-run",
+        "test": [
+            "@test:type-coverage",
+            "@test:typos",
+            "@test:unit",
+            "@test:lint",
+            "@test:types",
+            "@test:refactor"
         ]
     },
     "extra": {
@@ -70,6 +88,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
