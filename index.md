@@ -1,14 +1,8 @@
-- t && git add . && git reset --hard && export XDEBUG_MODE=coverage && subl .
-- Wifi off and notifications Off
+- Wi-fi off and notifications off...
+- TODO: reset git of talk + opening the project on phpstorm
+- PHPStorm on window fullscreen (with terminal down + decide the fist file open)
 - Deckset on window fullscreen
-- Open firefox
-- Sublime & Terminal side-by-side, open 1/PostsTests, run pest on terminal 1
 
----
-
-![](og.png)
-
-[.background-color: #000000]
 ---
 
 ![FIT](twitter.png)
@@ -20,133 +14,81 @@
 ![inline](laravel.png)
 
 [.background-color: #FFFFFF]
+
 ---
 
-![FIT](spicy.png)
+![](og.png)
 
 [.background-color: #000000]
 ---
 
-![](syntax.png)
+# Modern
+## _PHP Tooling_
 
 ---
 
-## PEST v1.0
-### _Spring 2021_
+- Linting, Fixing Typos, Type Checking
+- Modern Syntax, Parallel Testing, Type Coverage
+- Code Coverage, Arch Testing, Scripts
 
 ---
 
-![FIT](pool.png)
+# Pint / _Linting_
+### Keep Things Clean
 
-[.background-color: #000000]
+^ Demo the default style of pint, uncomment the pint.json, showcase advanced options...
+^ Joke: "Not the pint that most of you drink"
+---
+
+# Peck
+## _Fixing Typos_
+### No More Embarrassing Typos
+
+^ Demo simply typo on AppServiceProvider
 
 ---
 
-## PEST v2.0
-### _Spring 2023_
+# PhpStan
+## _Type Checking_
+### Push to prod with your eyes closed
+
+^ Demo unreachable code + missing import + other thing TODO...
 
 ---
 
-**--profile** analysis ∙ **--coverage** reports ∙ **--parallel** support ∙ **Arch testing** ∙ **--watch** mode ∙ **datasets** ∙ **--drift** from PHPUnit ∙ **--type-coverage** ∙ Mocking  ∙ **Snapshot** Testing ∙ **--todos** ∙ **--retry** ∙ **stress testing**
+# Rector
+## _Code Modernization_
+### Be ready for PHP 9 in seconds!
 
 ---
 
-## 18 million
-### _Total Downloads_
+# Pest
+## _Parallel Testing_
+### Less Waiting, More Coding
 
 ---
 
-![FIT](docs.png)
-
-[.background-color: #FFFFFF]
-
----
-
-# PEST v3.0
-## _Test. Like never before._
-
----
----
-
-![](todos.jpg)
+# Pest
+## _Type Coverage_
+### Sleep like a baby
 
 ---
 
-![FIT](c.png)
+# Pest
+## _Code Coverage_
+### No blind spots
 
 ---
 
-### **TASK MANAGEMENT**
-### issue, tickets, notes. Literally.
-
----
----
-
-![](arch-testing.jpg)
+# Pest
+## _Arch Testing_
+### Keep your codebase modular
 
 ---
 
----
-
-### **ARCH PRESETS**
-### php, laravel, security, and more...
-
----
----
-
-![](coverage.jpg)
+# Composer Scripts
+## _Run them all!_
 
 ---
 
-# MUTATION TESTING
-
----
-
-![](sandro.png)
-
----
-
-![](site.png)
-
-[.background-color: #000000]
-
----
-
-![FIT](first.png)
-
-[.background-color: #000000]
-
----
-
-# Pest 3
-### _Release_ **Next Week!**
-
----
----
-
-## just a "_composer update_" away from you.
-
----
-
-One more thing...
-
----
----
-
-![FIT](pinkary.svg)
-
----
-
-![FIT](pinkary1.png)
-
----
-
-![FIT](pinkary2.png)
-
----
-
-## Pinkary
-#### _Open Source_ **Today!**
-
-# Pest 3
-### _Release_ **Next Week!**
+### **youtube.com/nunomaduro**
