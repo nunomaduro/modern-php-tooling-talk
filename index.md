@@ -48,7 +48,8 @@
 ## _Fixing Typos_
 ### No More Embarrassing Typos
 
-^ Demo simply typo on AppServiceProvider
+^ Demo two typos on ValueObjects/Person.php
+^ 2 minutes
 
 ---
 
