@@ -20,4 +20,3 @@ class Person
         return $this->name;
     }
 }
-
