@@ -6,8 +6,17 @@ class UserController extends Controller
 {
     public function index()
     {
-        // $users = array(1, 2, 3);
+        $result = array();
 
-        // return $users;
+        switch (request()->type) {
+            case 'admin':
+                $result = array(1, 2, 3);
+                break;
+            case 'user':
+                $result = array(4, 5, 6);
+                break;
+        }
+
+        return $result;
     }
 }
