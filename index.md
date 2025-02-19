@@ -36,8 +36,11 @@
 # Pint / _Linting_
 ### Keep Things Clean
 
-^ Demo the default style of pint, uncomment the pint.json, showcase advanced options...
+^ Demo: dummy changes on app service provider, after:
+^ 1: strict types, final classes,
+^ 2: method ordering, == | ===
 ^ Joke: "Not the pint that most of you drink"
+^ 4 minutes
 
 ---
 
