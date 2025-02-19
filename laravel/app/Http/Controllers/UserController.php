@@ -6,7 +6,6 @@ class UserController extends Controller
 {
     public function index()
     {
-        /**
         $result = array();
 
         switch (request()->type) {
@@ -19,6 +18,5 @@ class UserController extends Controller
         }
 
         return $result;
-        */
     }
 }
