@@ -72,6 +72,7 @@
 ^ PHPStan warns you about the issues, Rector fixes them
 ^ You can be ready for newer PHP versions in seconds
 ^ Let show you some examples!
+^ 2 minutes (11min total)
 
 ---
 
