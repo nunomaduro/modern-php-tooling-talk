@@ -49,7 +49,7 @@
 ### No More Embarrassing Typos
 
 ^ Demo two typos on ValueObjects/Person.php
-^ 2 minutes
+^ 2 minutes (6min total)
 
 ---
 
@@ -57,7 +57,9 @@
 ## _Type Checking_
 ### Push to prod with your eyes closed
 
-^ Demo unreachable code + missing import + other thing TODO...
+^ Most of probably already know, if you don't know, what are you doing with your life?
+^ It's the equivalent of TypeScript for PHP
+^ To the point, you can even push to prod with your eyes closed...
 
 ---
 

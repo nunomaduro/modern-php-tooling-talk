@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
-
 class ArticleController extends Controller
 {
     /**
      * Returns a view with all articles.
      */
-    public function index(): View
+    public function index(): int
     {
         dd();
 
