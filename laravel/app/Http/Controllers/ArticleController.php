@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+// use Illuminate\View\View;
+
 class ArticleController extends Controller
 {
     /**

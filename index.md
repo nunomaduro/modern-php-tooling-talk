@@ -60,12 +60,18 @@
 ^ Most of probably already know, if you don't know, what are you doing with your life?
 ^ It's the equivalent of TypeScript for PHP
 ^ To the point, you can even push to prod with your eyes closed...
+^ 3 minutes (9min total) (generic examples?)
 
 ---
 
 # Rector
 ## _Code Modernization_
 ### Be ready for PHP 9 in seconds!
+
+^ We can not talk about phpstan without talking about rector
+^ PHPStan warns you about the issues, Rector fixes them
+^ You can be ready for newer PHP versions in seconds
+^ Let show you some examples!
 
 ---
 
