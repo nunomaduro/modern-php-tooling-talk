@@ -3,3 +3,4 @@ laravel/.phpunit.cache/test-results
 .idea/*
 .DS_Store
 laravel/vendor/pestphp/pest/.temp/test-results
+laravel/vendor/pestphp/pest/.temp/code-coverage/

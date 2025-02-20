@@ -12,7 +12,7 @@ class UserController extends Controller
             case 'admin':
                 $result = array(1, 2, 3);
                 break;
-            case 'user':
+            case 'customer':
                 $result = array(4, 5, 6);
                 break;
         }

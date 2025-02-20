@@ -20,6 +20,7 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
+        '9b38cf48e83f5d8f60375221cd213eee' => __DIR__ . '/..' . '/phpstan/phpstan/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '2203a247e6fda86070a5e4e07aed533a' => __DIR__ . '/..' . '/symfony/clock/Resources/now.php',
         '09f6b20656683369174dd6fa83b7e5fb' => __DIR__ . '/..' . '/symfony/polyfill-uuid/bootstrap.php',
@@ -28,7 +29,6 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         '47e1160838b5e5a10346ac4084b58c23' => __DIR__ . '/..' . '/laravel/prompts/src/helpers.php',
         'a1cfe24d14977df6878b9bf804af2d1c' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php',
         'aadac1114cab8dc19489a7f6dc24c003' => __DIR__ . '/..' . '/pestphp/pest-plugin-arch/src/Autoload.php',
-        '9b38cf48e83f5d8f60375221cd213eee' => __DIR__ . '/..' . '/phpstan/phpstan/bootstrap.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '476ca15b8d69b04665cd879be9cb4c68' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/functions.php',
         '265b4faa2b3a9766332744949e83bf97' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/helpers.php',
@@ -63,6 +63,7 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         ),
         'T' => 
         array (
+            'TomasVotruba\\TypeCoverage\\' => 26,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
             'Tests\\' => 6,
             'Termwind\\' => 9,
@@ -116,6 +117,7 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
             'PhpParser\\' => 10,
             'PhpOption\\' => 10,
             'PhpMyAdmin\\SqlParser\\' => 21,
+            'Pest\\TypeCoverage\\' => 18,
             'Pest\\Plugin\\' => 12,
             'Pest\\Mutate\\' => 12,
             'Pest\\Laravel\\' => 13,
@@ -222,6 +224,10 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'TomasVotruba\\TypeCoverage\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -399,6 +405,10 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         'PhpMyAdmin\\SqlParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmyadmin/sql-parser/src',
+        ),
+        'Pest\\TypeCoverage\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pestphp/pest-plugin-type-coverage/src',
         ),
         'Pest\\Plugin\\' => 
         array (
@@ -611,6 +621,7 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         'App\\Models\\Article' => __DIR__ . '/../..' . '/app/Models/Article.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
+        'App\\ValueObjects\\Car' => __DIR__ . '/../..' . '/app/ValueObjects/Car.php',
         'App\\ValueObjects\\Person' => __DIR__ . '/../..' . '/app/ValueObjects/Person.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
@@ -3937,6 +3948,7 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         'Override' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/Override.php',
         'PHPStan\\PhpDocParser\\Ast\\AbstractNodeVisitor' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/AbstractNodeVisitor.php',
         'PHPStan\\PhpDocParser\\Ast\\Attribute' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/Attribute.php',
+        'PHPStan\\PhpDocParser\\Ast\\Comment' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/Comment.php',
         'PHPStan\\PhpDocParser\\Ast\\ConstExpr\\ConstExprArrayItemNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/ConstExpr/ConstExprArrayItemNode.php',
         'PHPStan\\PhpDocParser\\Ast\\ConstExpr\\ConstExprArrayNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/ConstExpr/ConstExprArrayNode.php',
         'PHPStan\\PhpDocParser\\Ast\\ConstExpr\\ConstExprFalseNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/ConstExpr/ConstExprFalseNode.php',
@@ -5507,6 +5519,16 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         'Pest\\TestCaseMethodFilters\\TodoTestCaseFilter' => __DIR__ . '/..' . '/pestphp/pest/src/TestCaseMethodFilters/TodoTestCaseFilter.php',
         'Pest\\TestCases\\IgnorableTestCase' => __DIR__ . '/..' . '/pestphp/pest/src/TestCases/IgnorableTestCase.php',
         'Pest\\TestSuite' => __DIR__ . '/..' . '/pestphp/pest/src/TestSuite.php',
+        'Pest\\TypeCoverage\\Analyser' => __DIR__ . '/..' . '/pestphp/pest-plugin-type-coverage/src/Analyser.php',
+        'Pest\\TypeCoverage\\Contracts\\Logger' => __DIR__ . '/..' . '/pestphp/pest-plugin-type-coverage/src/Contracts/Logger.php',
+        'Pest\\TypeCoverage\\Error' => __DIR__ . '/..' . '/pestphp/pest-plugin-type-coverage/src/Error.php',
+        'Pest\\TypeCoverage\\Logging\\JsonLogger' => __DIR__ . '/..' . '/pestphp/pest-plugin-type-coverage/src/Logging/JsonLogger.php',
+        'Pest\\TypeCoverage\\Logging\\NullLogger' => __DIR__ . '/..' . '/pestphp/pest-plugin-type-coverage/src/Logging/NullLogger.php',
+        'Pest\\TypeCoverage\\PHPStanAnalyser' => __DIR__ . '/..' . '/pestphp/pest-plugin-type-coverage/src/PHPStanAnalyser.php',
+        'Pest\\TypeCoverage\\Plugin' => __DIR__ . '/..' . '/pestphp/pest-plugin-type-coverage/src/Plugin.php',
+        'Pest\\TypeCoverage\\Result' => __DIR__ . '/..' . '/pestphp/pest-plugin-type-coverage/src/Result.php',
+        'Pest\\TypeCoverage\\Support\\ConfigurationSourceDetector' => __DIR__ . '/..' . '/pestphp/pest-plugin-type-coverage/src/Support/ConfigurationSourceDetector.php',
+        'Pest\\TypeCoverage\\TestCaseForTypeCoverage' => __DIR__ . '/..' . '/pestphp/pest-plugin-type-coverage/src/TestCaseForTypeCoverage.php',
         'PharIo\\Manifest\\Application' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Application.php',
         'PharIo\\Manifest\\ApplicationName' => __DIR__ . '/..' . '/phar-io/manifest/src/values/ApplicationName.php',
         'PharIo\\Manifest\\Author' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Author.php',
@@ -7567,6 +7589,21 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+        'TomasVotruba\\TypeCoverage\\CollectorDataNormalizer' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/CollectorDataNormalizer.php',
+        'TomasVotruba\\TypeCoverage\\Collectors\\ConstantTypeDeclarationCollector' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Collectors/ConstantTypeDeclarationCollector.php',
+        'TomasVotruba\\TypeCoverage\\Collectors\\DeclareCollector' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Collectors/DeclareCollector.php',
+        'TomasVotruba\\TypeCoverage\\Collectors\\ParamTypeDeclarationCollector' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Collectors/ParamTypeDeclarationCollector.php',
+        'TomasVotruba\\TypeCoverage\\Collectors\\PropertyTypeDeclarationCollector' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Collectors/PropertyTypeDeclarationCollector.php',
+        'TomasVotruba\\TypeCoverage\\Collectors\\ReturnTypeDeclarationCollector' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Collectors/ReturnTypeDeclarationCollector.php',
+        'TomasVotruba\\TypeCoverage\\Configuration' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Configuration.php',
+        'TomasVotruba\\TypeCoverage\\Configuration\\ScopeConfigurationResolver' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Configuration/ScopeConfigurationResolver.php',
+        'TomasVotruba\\TypeCoverage\\Formatter\\TypeCoverageFormatter' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Formatter/TypeCoverageFormatter.php',
+        'TomasVotruba\\TypeCoverage\\Rules\\ConstantTypeCoverageRule' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Rules/ConstantTypeCoverageRule.php',
+        'TomasVotruba\\TypeCoverage\\Rules\\DeclareCoverageRule' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Rules/DeclareCoverageRule.php',
+        'TomasVotruba\\TypeCoverage\\Rules\\ParamTypeCoverageRule' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Rules/ParamTypeCoverageRule.php',
+        'TomasVotruba\\TypeCoverage\\Rules\\PropertyTypeCoverageRule' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Rules/PropertyTypeCoverageRule.php',
+        'TomasVotruba\\TypeCoverage\\Rules\\ReturnTypeCoverageRule' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/Rules/ReturnTypeCoverageRule.php',
+        'TomasVotruba\\TypeCoverage\\ValueObject\\TypeCountAndMissingTypes' => __DIR__ . '/..' . '/tomasvotruba/type-coverage/src/ValueObject/TypeCountAndMissingTypes.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',

@@ -90,18 +90,20 @@
 ---
 
 # Pest
-## _Type Coverage_
-### Sleep like a baby
-
-^ 3 minutes (16:30min total) (estimation)
-
----
-
-# Pest
 ## _Code Coverage_
 ### No blind spots
 
 ^ 3 minutes (19:30min total) (estimation)
+
+---
+
+# Pest
+## _Type Coverage_
+### Sleep like a baby
+
+
+^ Demo: car value objects example...
+^ 3 minutes (16:30min total) (estimation)
 
 ---
 
