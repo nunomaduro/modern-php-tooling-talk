@@ -80,11 +80,20 @@
 ## _Parallel Testing_
 ### Less Waiting, More Coding
 
+^ Some of you already know what's Pest, but it trully breaks my heart to see that most
+^ of you are still not using the built-in parallel testing capabilities of Pest.
+^ Unless you enjoy your test suite taking forever, you should just use the --parallel
+^ option by default...
+
+^ 2 minutes (13:30min total)
+
 ---
 
 # Pest
 ## _Type Coverage_
 ### Sleep like a baby
+
+^ 3 minutes (16:30min total) (estimation)
 
 ---
 
@@ -92,16 +101,22 @@
 ## _Code Coverage_
 ### No blind spots
 
+^ 3 minutes (19:30min total) (estimation)
+
 ---
 
 # Pest
 ## _Arch Testing_
 ### Keep your codebase modular
 
+^ 5 minutes (24:30min total) (estimation)
+
 ---
 
 # Composer Scripts
 ## _Run them all!_
+
+^ 3 minutes (27:30min total) (estimation)
 
 ---
 
