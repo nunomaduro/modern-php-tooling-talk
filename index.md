@@ -36,20 +36,11 @@
 # Pint / _Linting_
 ### Keep Things Clean
 
-^ Demo: dummy changes on app service provider, after:
-^ 1: strict types, final classes,
-^ 2: method ordering, == | ===
-^ Joke: "Not the pint that most of you drink"
-^ 4 minutes
-
 ---
 
 # Peck
 ## _Fixing Typos_
 ### No More Embarrassing Typos
-
-^ Demo two typos on ValueObjects/Person.php
-^ 2 minutes (6min total)
 
 ---
 
@@ -57,22 +48,11 @@
 ## _Type Checking_
 ### Push to prod with your eyes closed
 
-^ Most of probably already know, if you don't know, what are you doing with your life?
-^ It's the equivalent of TypeScript for PHP
-^ To the point, you can even push to prod with your eyes closed...
-^ 3 minutes (9min total) (generic examples?)
-
 ---
 
 # Rector
 ## _Code Modernization_
 ### Be ready for PHP 9 in seconds!
-
-^ We can not talk about phpstan without talking about rector
-^ PHPStan warns you about the issues, Rector fixes them
-^ You can be ready for newer PHP versions in seconds
-^ Let show you some examples!
-^ 2:30s minutes (11:30min total)
 
 ---
 
@@ -80,30 +60,17 @@
 ## _Parallel Testing_
 ### Less Waiting, More Coding
 
-^ Some of you already know what's Pest, but it trully breaks my heart to see that most
-^ of you are still not using the built-in parallel testing capabilities of Pest.
-^ Unless you enjoy your test suite taking forever, you should just use the --parallel
-^ option by default...
-
-^ 2 minutes (13:30min total)
-
 ---
 
 # Pest
 ## _Code Coverage_
 ### No blind spots
 
-^ 3 minutes (19:30min total) (estimation)
-
 ---
 
 # Pest
 ## _Type Coverage_
 ### Sleep like a baby
-
-
-^ Demo: car value objects example...
-^ 3 minutes (16:30min total) (estimation)
 
 ---
 

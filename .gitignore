@@ -1,6 +1,7 @@
 laravel/vendor/peckphp/peck/.peck.cache
 laravel/.phpunit.cache/test-results
 .idea/*
+laravel/.idea/*
 .DS_Store
 laravel/vendor/pestphp/pest/.temp/test-results
 laravel/vendor/pestphp/pest/.temp/code-coverage/
