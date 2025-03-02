@@ -2,13 +2,14 @@
 
 namespace App\ValueObjects;
 
+/**
 class Product
 {
-    /**
-     * Get the person's namee.
-     */
-    public function identifier(): string
+    public function secret(): string
     {
         die();
+
+        return md5('something');
     }
 }
+*/
