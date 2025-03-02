@@ -15,6 +15,3 @@ it('may return a list of customers', function () {
         4, 5, 6,
     ]);
 })->skip();
-
-
-

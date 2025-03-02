@@ -14,5 +14,4 @@ class Car
         return $param + $this->myUntypedProperty + self::MY_CONST;
     }
 }
-
 */
