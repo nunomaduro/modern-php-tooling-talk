@@ -2,6 +2,7 @@
 
 namespace App\ValueObjects;
 
+/**
 class ArchExample
 {
     public function phpPresetExample(): void
@@ -19,6 +20,7 @@ class ArchExample
 
     public function laravelPresetExample(): void
     {
-        // don't forget crud by design..
+        // don't forget crud by design...
     }
 }
+ */

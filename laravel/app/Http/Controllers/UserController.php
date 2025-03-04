@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-/**
+use App\Models\User;
+
 class UserController
 {
     public function index()
@@ -20,5 +21,13 @@ class UserController
 
         return $result;
     }
+
+    public function show(User $user): User
+    {
+        if (true) {
+            $user = $user;
+        }
+
+        return $user;
+    }
 }
-*/
