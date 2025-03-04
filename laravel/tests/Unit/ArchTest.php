@@ -1,23 +1,6 @@
 <?php
 
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-return;
+/**
 arch()->preset()->php();
 arch()->preset()->laravel();
 arch()->preset()->security();
@@ -30,3 +13,4 @@ arch('annotations')
     ->expect('App')
     ->toHavePropertiesDocumented()
     ->toHaveMethodsDocumented();
+*/
