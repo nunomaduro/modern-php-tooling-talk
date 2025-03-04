@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-// use Illuminate\View\View;
+use App\Models\Article;
+use Illuminate\View\View;
 
 class ArticleController
 {
@@ -13,18 +14,26 @@ class ArticleController
     {
         dd();
 
-        return view('articles', [
+        return view('articles.list', [
             'articles' => Article::all(),
         ]);
     }
 
-    public function publish(): void
+    public function publish(Article $article): View
     {
-        // your public logic...
+        $article->publish();
+
+        return view('articles.show', [
+            'article' => $article,
+        ]);
     }
 
-    public function unpublish(): void
+    public function unpublish(Article $article): View
     {
-        // your unpublish logic...
+        $article->unpublish();
+
+        return view('articles.show', [
+            'article' => $article,
+        ]);
     }
 }
