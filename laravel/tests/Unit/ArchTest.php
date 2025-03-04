@@ -1,7 +1,24 @@
 <?php
 
-arch()->preset()->php();
+//
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return;
+arch()->preset()->php();
 arch()->preset()->laravel();
 arch()->preset()->security();
 
