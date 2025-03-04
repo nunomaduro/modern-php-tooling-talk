@@ -6,8 +6,8 @@ namespace Rector\Configuration;
 use Rector\ChangesReporting\Output\ConsoleOutputFormatter;
 use Rector\Configuration\Parameter\SimpleParameterProvider;
 use Rector\ValueObject\Configuration;
-use RectorPrefix202502\Symfony\Component\Console\Input\InputInterface;
-use RectorPrefix202502\Symfony\Component\Console\Style\SymfonyStyle;
+use RectorPrefix202503\Symfony\Component\Console\Input\InputInterface;
+use RectorPrefix202503\Symfony\Component\Console\Style\SymfonyStyle;
 /**
  * @see \Rector\Tests\Configuration\ConfigurationFactoryTest
  */
@@ -63,7 +63,8 @@ final class ConfigurationFactory
         }
         $memoryLimit = $this->resolveMemoryLimit($input);
         $isReportingWithRealPath = SimpleParameterProvider::provideBoolParameter(\Rector\Configuration\Option::ABSOLUTE_FILE_PATH);
-        return new Configuration($isDryRun, $showProgressBar, $shouldClearCache, $outputFormat, $fileExtensions, $paths, $showDiffs, $parallelPort, $parallelIdentifier, $isParallel, $memoryLimit, $isDebug, $isReportingWithRealPath, $onlyRule, $onlySuffix);
+        $levelOverflows = SimpleParameterProvider::provideArrayParameter(\Rector\Configuration\Option::LEVEL_OVERFLOWS);
+        return new Configuration($isDryRun, $showProgressBar, $shouldClearCache, $outputFormat, $fileExtensions, $paths, $showDiffs, $parallelPort, $parallelIdentifier, $isParallel, $memoryLimit, $isDebug, $isReportingWithRealPath, $onlyRule, $onlySuffix, $levelOverflows);
     }
     private function shouldShowProgressBar(InputInterface $input, string $outputFormat) : bool
     {

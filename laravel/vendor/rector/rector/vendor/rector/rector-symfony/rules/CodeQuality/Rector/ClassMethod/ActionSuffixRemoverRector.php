@@ -3,7 +3,7 @@
 declare (strict_types=1);
 namespace Rector\Symfony\CodeQuality\Rector\ClassMethod;
 
-use RectorPrefix202502\Nette\Utils\Strings;
+use RectorPrefix202503\Nette\Utils\Strings;
 use PhpParser\Node;
 use PhpParser\Node\Identifier;
 use PhpParser\Node\Stmt\ClassMethod;
@@ -62,13 +62,16 @@ CODE_SAMPLE
         if ($node->name->toString() === 'getAction') {
             return null;
         }
-        $this->removeSuffix($node, 'Action');
-        return $node;
+        return $this->removeSuffix($node, 'Action');
     }
-    private function removeSuffix(ClassMethod $classMethod, string $suffixToRemove) : void
+    private function removeSuffix(ClassMethod $classMethod, string $suffixToRemove) : ?ClassMethod
     {
         $name = $this->nodeNameResolver->getName($classMethod);
         $newName = Strings::replace($name, \sprintf('#%s$#', $suffixToRemove), '');
+        if ($newName === $name) {
+            return null;
+        }
         $classMethod->name = new Identifier($newName);
+        return $classMethod;
     }
 }

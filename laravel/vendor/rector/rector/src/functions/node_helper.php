@@ -1,14 +1,14 @@
 <?php
 
 declare (strict_types=1);
-namespace RectorPrefix202502;
+namespace RectorPrefix202503;
 
-use RectorPrefix202502\Illuminate\Container\Container;
+use RectorPrefix202503\Illuminate\Container\Container;
 use PhpParser\Node;
 use PhpParser\PrettyPrinter\Standard;
 use Rector\Console\Style\SymfonyStyleFactory;
 use Rector\Util\NodePrinter;
-use RectorPrefix202502\Symfony\Component\Console\Output\OutputInterface;
+use RectorPrefix202503\Symfony\Component\Console\Output\OutputInterface;
 if (!\function_exists('print_node')) {
     /**
      * @param Node|Node[] $node
@@ -29,12 +29,12 @@ if (!\function_exists('dump_node')) {
      */
     function dump_node($node) : void
     {
-        $symfonyStyle = Container::getInstance()->make(SymfonyStyleFactory::class)->create();
+        $rectorStyle = Container::getInstance()->make(SymfonyStyleFactory::class)->create();
         // we turn up the verbosity so it's visible in tests overriding the
         // default which is to be quite during tests
-        $symfonyStyle->setVerbosity(OutputInterface::VERBOSITY_VERBOSE);
-        $symfonyStyle->newLine();
-        $nodePrinter = new NodePrinter($symfonyStyle);
+        $rectorStyle->setVerbosity(OutputInterface::VERBOSITY_VERBOSE);
+        $rectorStyle->newLine();
+        $nodePrinter = new NodePrinter($rectorStyle);
         $nodePrinter->printNodes($node);
     }
 }

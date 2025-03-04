@@ -19,7 +19,7 @@ use PhpParser\NodeVisitor;
 use Rector\NodeAnalyzer\ClassAnalyzer;
 use Rector\NodeNameResolver\NodeNameResolver;
 use Rector\PhpDocParser\NodeTraverser\SimpleCallableNodeTraverser;
-use RectorPrefix202502\Webmozart\Assert\Assert;
+use RectorPrefix202503\Webmozart\Assert\Assert;
 /**
  * @see \Rector\Tests\PhpParser\Node\BetterNodeFinder\BetterNodeFinderTest
  */
@@ -117,14 +117,14 @@ final class BetterNodeFinder
     public function hasInstancesOf($nodes, array $types) : bool
     {
         Assert::allIsAOf($types, Node::class);
-        foreach ($types as $type) {
-            $foundNode = $this->nodeFinder->findFirstInstanceOf($nodes, $type);
-            if (!$foundNode instanceof Node) {
-                continue;
+        return (bool) $this->nodeFinder->findFirst($nodes, static function (Node $node) use($types) : bool {
+            foreach ($types as $type) {
+                if ($node instanceof $type) {
+                    return \true;
+                }
             }
-            return \true;
-        }
-        return \false;
+            return \false;
+        });
     }
     /**
      * @param Node|Node[] $nodes
@@ -249,36 +249,16 @@ final class BetterNodeFinder
      */
     public function findFirstInFunctionLikeScoped($functionLike, callable $filter) : ?Node
     {
-        if ($functionLike->stmts === null) {
-            return null;
-        }
-        $foundNode = $this->findFirst($functionLike->stmts, $filter);
-        if (!$foundNode instanceof Node) {
-            return null;
-        }
-        if (!$this->hasInstancesOf($functionLike->stmts, [Class_::class, FunctionLike::class])) {
-            return $foundNode;
-        }
         $scopedNode = null;
-        $this->simpleCallableNodeTraverser->traverseNodesWithCallable($functionLike->stmts, function (Node $subNode) use(&$scopedNode, $foundNode, $filter) : ?int {
-            if ($subNode instanceof Class_ || $subNode instanceof FunctionLike) {
-                if ($foundNode instanceof $subNode && $subNode === $foundNode) {
-                    $scopedNode = $subNode;
-                    return NodeVisitor::STOP_TRAVERSAL;
+        $this->simpleCallableNodeTraverser->traverseNodesWithCallable((array) $functionLike->stmts, function (Node $subNode) use(&$scopedNode, $filter) : ?int {
+            if (!$filter($subNode)) {
+                if ($subNode instanceof Class_ || $subNode instanceof FunctionLike) {
+                    return NodeVisitor::DONT_TRAVERSE_CURRENT_AND_CHILDREN;
                 }
-                return NodeVisitor::DONT_TRAVERSE_CURRENT_AND_CHILDREN;
-            }
-            if (!$foundNode instanceof $subNode) {
                 return null;
             }
-            // handle after Closure
-            // @see https://github.com/rectorphp/rector-src/pull/4931
-            $scopedFoundNode = $this->findFirst($subNode, $filter);
-            if ($scopedFoundNode === $subNode) {
-                $scopedNode = $subNode;
-                return NodeVisitor::STOP_TRAVERSAL;
-            }
-            return null;
+            $scopedNode = $subNode;
+            return NodeVisitor::STOP_TRAVERSAL;
         });
         return $scopedNode;
     }

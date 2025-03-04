@@ -1,16 +1,20 @@
 <?php
 
-/**
+use Database\Seeders\DatabaseSeeder;
+
 arch()->preset()->php();
 arch()->preset()->laravel();
 arch()->preset()->security();
 
 arch('controllers')
     ->expect('App\Http\Controllers')
-    ->not->toBeUsed();
+    ->toExtendNothing();
 
-arch('annotations')
-    ->expect('App')
-    ->toHavePropertiesDocumented()
-    ->toHaveMethodsDocumented();
-*/
+arch('models')
+    ->expect('App\Models')
+    ->toOnlyBeUsedIn('App\Repositories')
+    ->ignoring(DatabaseSeeder::class);
+
+arch('value objects')
+    ->expect('App\ValueObjects')
+    ->toUseNothing();

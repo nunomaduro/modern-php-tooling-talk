@@ -3,7 +3,7 @@
 declare (strict_types=1);
 namespace Rector\Config;
 
-use RectorPrefix202502\Illuminate\Container\Container;
+use RectorPrefix202503\Illuminate\Container\Container;
 use Rector\Caching\Contract\ValueObject\Storage\CacheStorageInterface;
 use Rector\Configuration\Option;
 use Rector\Configuration\Parameter\SimpleParameterProvider;
@@ -16,13 +16,14 @@ use Rector\DependencyInjection\Laravel\ContainerMemento;
 use Rector\Exception\ShouldNotHappenException;
 use Rector\Skipper\SkipCriteriaResolver\SkippedClassResolver;
 use Rector\Validation\RectorConfigValidator;
+use Rector\ValueObject\Configuration\LevelOverflow;
 use Rector\ValueObject\PhpVersion;
 use Rector\ValueObject\PolyfillPackage;
-use RectorPrefix202502\Symfony\Component\Console\Command\Command;
-use RectorPrefix202502\Symfony\Component\Console\Input\ArrayInput;
-use RectorPrefix202502\Symfony\Component\Console\Output\ConsoleOutput;
-use RectorPrefix202502\Symfony\Component\Console\Style\SymfonyStyle;
-use RectorPrefix202502\Webmozart\Assert\Assert;
+use RectorPrefix202503\Symfony\Component\Console\Command\Command;
+use RectorPrefix202503\Symfony\Component\Console\Input\ArrayInput;
+use RectorPrefix202503\Symfony\Component\Console\Output\ConsoleOutput;
+use RectorPrefix202503\Symfony\Component\Console\Style\SymfonyStyle;
+use RectorPrefix202503\Webmozart\Assert\Assert;
 /**
  * @api
  */
@@ -355,5 +356,12 @@ final class RectorConfig extends Container
     public function getRectorClasses() : array
     {
         return $this->tags[RectorInterface::class] ?? [];
+    }
+    /**
+     * @param LevelOverflow[] $levelOverflows
+     */
+    public function setOverflowLevels(array $levelOverflows) : void
+    {
+        SimpleParameterProvider::addParameter(Option::LEVEL_OVERFLOWS, $levelOverflows);
     }
 }

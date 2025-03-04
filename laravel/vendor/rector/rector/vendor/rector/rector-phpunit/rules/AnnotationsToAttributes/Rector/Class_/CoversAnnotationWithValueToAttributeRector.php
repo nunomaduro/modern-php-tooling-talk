@@ -3,7 +3,7 @@
 declare (strict_types=1);
 namespace Rector\PHPUnit\AnnotationsToAttributes\Rector\Class_;
 
-use RectorPrefix202502\Nette\Utils\Strings;
+use RectorPrefix202503\Nette\Utils\Strings;
 use PhpParser\Node;
 use PhpParser\Node\AttributeGroup;
 use PhpParser\Node\Stmt\Class_;
@@ -58,6 +58,10 @@ final class CoversAnnotationWithValueToAttributeRector extends AbstractRector im
      * @var string
      */
     private const COVERTS_CLASS_ATTRIBUTE = 'PHPUnit\\Framework\\Attributes\\CoversClass';
+    /**
+     * @var string
+     */
+    private const COVERTS_TRAIT_ATTRIBUTE = 'PHPUnit\\Framework\\Attributes\\CoversTrait';
     /**
      * @var string
      */
@@ -153,6 +157,12 @@ CODE_SAMPLE
             $attributeValue = [$this->getClass($annotationValue) . '::class', $this->getMethod($annotationValue)];
         } else {
             $attributeClass = self::COVERTS_CLASS_ATTRIBUTE;
+            if ($this->reflectionProvider->hasClass($annotationValue)) {
+                $classReflection = $this->reflectionProvider->getClass($annotationValue);
+                if ($classReflection->isTrait()) {
+                    $attributeClass = self::COVERTS_TRAIT_ATTRIBUTE;
+                }
+            }
             $attributeValue = [\trim($annotationValue) . '::class'];
         }
         return $this->phpAttributeGroupFactory->createFromClassWithItems($attributeClass, $attributeValue);

@@ -8,16 +8,16 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace RectorPrefix202502\Symfony\Component\Process;
+namespace RectorPrefix202503\Symfony\Component\Process;
 
-use RectorPrefix202502\Symfony\Component\Process\Exception\InvalidArgumentException;
-use RectorPrefix202502\Symfony\Component\Process\Exception\LogicException;
-use RectorPrefix202502\Symfony\Component\Process\Exception\ProcessFailedException;
-use RectorPrefix202502\Symfony\Component\Process\Exception\ProcessSignaledException;
-use RectorPrefix202502\Symfony\Component\Process\Exception\ProcessTimedOutException;
-use RectorPrefix202502\Symfony\Component\Process\Exception\RuntimeException;
-use RectorPrefix202502\Symfony\Component\Process\Pipes\UnixPipes;
-use RectorPrefix202502\Symfony\Component\Process\Pipes\WindowsPipes;
+use RectorPrefix202503\Symfony\Component\Process\Exception\InvalidArgumentException;
+use RectorPrefix202503\Symfony\Component\Process\Exception\LogicException;
+use RectorPrefix202503\Symfony\Component\Process\Exception\ProcessFailedException;
+use RectorPrefix202503\Symfony\Component\Process\Exception\ProcessSignaledException;
+use RectorPrefix202503\Symfony\Component\Process\Exception\ProcessTimedOutException;
+use RectorPrefix202503\Symfony\Component\Process\Exception\RuntimeException;
+use RectorPrefix202503\Symfony\Component\Process\Pipes\UnixPipes;
+use RectorPrefix202503\Symfony\Component\Process\Pipes\WindowsPipes;
 /**
  * Process is a thin wrapper around proc_* functions to easily
  * start independent PHP processes.
@@ -81,7 +81,6 @@ class Process implements \IteratorAggregate
      */
     private $processPipes;
     private ?int $latestSignal = null;
-    private ?int $cachedExitCode = null;
     private static ?bool $sigchild = null;
     /**
      * Exit codes translation table.
@@ -1123,19 +1122,10 @@ class Process implements \IteratorAggregate
         if (self::STATUS_STARTED !== $this->status) {
             return;
         }
-        $this->processInformation = \proc_get_status($this->process);
-        $running = $this->processInformation['running'];
-        // In PHP < 8.3, "proc_get_status" only returns the correct exit status on the first call.
-        // Subsequent calls return -1 as the process is discarded. This workaround caches the first
-        // retrieved exit status for consistent results in later calls, mimicking PHP 8.3 behavior.
-        if (\PHP_VERSION_ID < 80300) {
-            if (!isset($this->cachedExitCode) && !$running && -1 !== $this->processInformation['exitcode']) {
-                $this->cachedExitCode = $this->processInformation['exitcode'];
-            }
-            if (isset($this->cachedExitCode) && !$running && -1 === $this->processInformation['exitcode']) {
-                $this->processInformation['exitcode'] = $this->cachedExitCode;
-            }
+        if ($this->processInformation['running'] ?? \true) {
+            $this->processInformation = \proc_get_status($this->process);
         }
+        $running = $this->processInformation['running'];
         $this->readPipes($running && $blocking, '\\' !== \DIRECTORY_SEPARATOR || !$running);
         if ($this->fallbackStatus && $this->isSigchildEnabled()) {
             $this->processInformation = $this->fallbackStatus + $this->processInformation;
