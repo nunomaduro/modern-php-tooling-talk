@@ -1,6 +1,5 @@
-- Wi-fi off and notifications off...
-- TODO: reset git of talk + opening the project on phpstorm
-- PHPStorm on window fullscreen (with terminal down + decide the fist file open)
+- WI-FI ON and notifications off...
+- reset git + opening the project on phpstorm + hyper
 - Deckset on window fullscreen
 
 ---
