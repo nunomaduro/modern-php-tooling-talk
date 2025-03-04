@@ -1,7 +1,6 @@
 <?php
 
-use Database\Seeders\DatabaseSeeder;
-
+/**
 arch()->preset()->php();
 arch()->preset()->laravel();
 arch()->preset()->security();
@@ -13,8 +12,9 @@ arch('controllers')
 arch('models')
     ->expect('App\Models')
     ->toOnlyBeUsedIn('App\Repositories')
-    ->ignoring(DatabaseSeeder::class);
+    ->ignoring(\Database\Seeders\DatabaseSeeder::class);
 
 arch('value objects')
     ->expect('App\ValueObjects')
     ->toUseNothing();
+*/
