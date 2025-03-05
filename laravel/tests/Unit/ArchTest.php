@@ -7,11 +7,5 @@ arch()->preset()->security();
 
 arch('controllers')
     ->expect('App\Http\Controllers')
-    ->toExtendNothing()
-    ->toBeFinal()
-    ->toBeReadonly();
-
-arch('value objects')
-    ->expect('App\ValueObjects')
-    ->toUseNothing();
-*/
+    ->toExtendNothing();
+ */
