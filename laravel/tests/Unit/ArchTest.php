@@ -7,12 +7,9 @@ arch()->preset()->security();
 
 arch('controllers')
     ->expect('App\Http\Controllers')
-    ->toExtendNothing();
-
-arch('models')
-    ->expect('App\Models')
-    ->toOnlyBeUsedIn('App\Repositories')
-    ->ignoring(\Database\Seeders\DatabaseSeeder::class);
+    ->toExtendNothing()
+    ->toBeFinal()
+    ->toBeReadonly();
 
 arch('value objects')
     ->expect('App\ValueObjects')

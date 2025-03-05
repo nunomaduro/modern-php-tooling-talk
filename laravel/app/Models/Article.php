@@ -10,9 +10,4 @@ class Article extends Model
     {
         $this->update(['published' => true]);
     }
-
-    public function unpublish(): void
-    {
-        $this->update(['published' => false]);
-    }
 }
