@@ -1,7 +1,6 @@
 <?php
 
-return;
-
+/**
 it('may return a list of admins', function () {
     $response = $this->get(route('users.index', ['type' => 'admin']));
 
@@ -17,3 +16,4 @@ it('may return a list of customers', function () {
         4, 5, 6,
     ]);
 });
+ */
